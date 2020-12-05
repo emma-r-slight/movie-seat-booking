@@ -13,6 +13,11 @@ function updateSelectedCount() {
   total.innerText = selectedSeatsCount * ticketPrice
 }
 
+movieSelect.addEventListener('change', (e) => {
+  ticketPrice = +e.target.value
+  updateSelectedCount()
+})
+
 container.addEventListener('click', (e) => {
   console.log(e.target.classList)
 
